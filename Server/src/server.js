@@ -17,6 +17,20 @@ app.get("/", (req, res) => {
 });
 
 // database
-app.listen(3000, () => {
-  console.log(`listening for 3000`);
-});
+
+mongoose
+  .connect(
+    "mongodb+srv://eslamicoo912:671973@cluster0.frlrshg.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    app.listen(3000, () => {
+      console.log(`listening for 3000`);
+    });
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
