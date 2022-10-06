@@ -4,7 +4,9 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
+const port = process.env.PORT | 5000;
 
 // basic middlewares
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
@@ -19,15 +21,12 @@ app.get("/", (req, res) => {
 // database
 
 mongoose
-  .connect(
-    "mongodb+srv://eslamicoo912:671973@cluster0.frlrshg.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(process.env.CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
-    app.listen(3000, () => {
+    app.listen(port, () => {
       console.log(`listening for 3000`);
     });
   })
