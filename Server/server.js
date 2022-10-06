@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import customerRoutes from "./routes/customer.routes.js";
 
 dotenv.config();
 const app = express();
@@ -14,9 +15,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 // routes
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+app.use("/customers", customerRoutes);
 
 // database
 
