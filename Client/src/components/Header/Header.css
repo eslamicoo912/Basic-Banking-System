@@ -8,12 +8,20 @@ header {
   gap: 40%;
 }
 
-header .title h1 {
-  letter-spacing: 3px;
+header .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header .title span {
+header .icon {
+  font-size: 2rem;
+  margin: 0 20px;
   color: #d65a27;
+}
+
+header .title h1 {
+  letter-spacing: 3px;
 }
 
 header .links {

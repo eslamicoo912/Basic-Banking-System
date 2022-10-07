@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { BsBank2 } from "react-icons/bs";
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
         <h1>
           Basic <span>Banking</span> System
         </h1>
+        <BsBank2 className="icon" />
       </div>
       <div className="links">
         <Link to="/">Home</Link>
