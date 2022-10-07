@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Card from "./Card/Card";
+import "./Customers.css";
 
 const URL = "http://localhost:5000/customers";
 
@@ -15,7 +17,22 @@ const Customers = () => {
     fetchData();
   }, []);
 
-  return <div className="customers"></div>;
+  const list = customers.map((customer, index) => {
+    return <Card key={index} customer={customer} />;
+  });
+
+  return (
+    <table className="customers">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>{list}</tbody>
+    </table>
+  );
 };
 
 export default Customers;

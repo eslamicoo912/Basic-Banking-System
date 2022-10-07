@@ -1,0 +1,30 @@
+td {
+  color: #201b4f;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #e3f1d5;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td,
+table th {
+  text-align: left;
+}
+table td.l,
+table th.l {
+  text-align: right;
+}
+table td.c,
+table th.c {
+  text-align: center;
+}
+table td.r,
+table th.r {
+  text-align: center;
+}
+table tbody tr:hover td {
+  background-color: #201b4f;
+  color: white;
+}

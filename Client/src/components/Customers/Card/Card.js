@@ -1,16 +1,15 @@
 import React from "react";
+import "./Card.css";
 
-const Card = ({ customers }) => {
-  return customers.map((customer, index) => {
-    const { name, email, balance } = customer;
-    return (
-      <div key={index} className="card">
-        <p>{name}</p>
-        <p>{email}</p>
-        <p>{balance}</p>
-      </div>
-    );
-  });
+const Card = ({ customer }) => {
+  const { name, email, balance } = customer;
+  return (
+    <tr>
+      <td>{name}</td>
+      <td>{email}</td>
+      <td>{balance}</td>
+    </tr>
+  );
 };
 
 export default Card;
