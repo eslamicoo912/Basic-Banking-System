@@ -36,22 +36,19 @@ export const transfer = async (req, res) => {
     const sender = await CustomerModel.findOne({ email: senderEmail });
     const reciever = await CustomerModel.findOne({ email: recieverEmail });
 
-    console.log(sender);
-    console.log(typeof sender.balance);
-    console.log(reciever);
-    console.log(typeof reciever.balance);
+    if (sender === null || reciever === null)
+      return res.status(200).json({ status: "failed" });
 
-    const updatedSender = await CustomerModel.updateOne(
+    await CustomerModel.updateOne(
       { email: senderEmail },
       { balance: sender.balance - amount }
     );
-    const updatedReciever = await CustomerModel.updateOne(
+    await CustomerModel.updateOne(
       { email: recieverEmail },
       { balance: reciever.balance + amount }
     );
-    res.json({
-      sender: updatedSender,
-      reciever: updatedReciever,
+    res.status(200).json({
+      status: "done",
     });
   } catch (error) {
     console.log(error.message);

@@ -9,6 +9,7 @@ const Transfer = () => {
     reciever: "ahmed10@yahoo.com",
     amount: 6165,
   });
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData((prevData) => ({
@@ -19,14 +20,8 @@ const Transfer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios
-      .post(URL, formData)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    const response = await axios.post(URL, formData);
+    setStatus(response.data.status);
   };
 
   return (
@@ -54,6 +49,13 @@ const Transfer = () => {
           placeholder="amount to transfer"
         />
         <button type="submit">Transfer</button>
+        {status === "done" ? (
+          <p className="done">Money Transfered Successfully</p>
+        ) : status === "failed" ? (
+          <p className="failed">Failed, please type valid emails</p>
+        ) : (
+          ""
+        )}
       </form>
     </div>
   );
