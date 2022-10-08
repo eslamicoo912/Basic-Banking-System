@@ -17,9 +17,11 @@ table td,
 table th {
   padding-left: 8px;
   text-align: center;
+  border: 1px solid #201b4f;
 }
 table thead tr {
   height: 60px;
-  background: #ffed86;
+  background: #201b4f;
+  color: white;
   font-size: 16px;
 }

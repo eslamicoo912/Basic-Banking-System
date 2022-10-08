@@ -1,5 +1,5 @@
 header {
-  background-color: #201b4f;
+  background-color: #1e2529;
   padding: 35px;
   color: white;
   display: flex;
@@ -14,10 +14,14 @@ header .title {
   align-items: center;
 }
 
+header span {
+  color: #d65a27;
+}
+
 header .icon {
   font-size: 2rem;
   margin: 0 20px;
-  color: #d65a27;
+  color: white;
 }
 
 header .title h1 {

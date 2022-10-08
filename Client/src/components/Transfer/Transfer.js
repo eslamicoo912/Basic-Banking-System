@@ -54,7 +54,7 @@ const Transfer = () => {
         ) : status === "failed" ? (
           <p className="failed">Failed, please type valid emails</p>
         ) : status === "not_enough" ? (
-          <p className="failed">Not enough balance</p>
+          <p className="not-enough">Not enough balance</p>
         ) : (
           ""
         )}
