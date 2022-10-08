@@ -50,9 +50,11 @@ const Transfer = () => {
         />
         <button type="submit">Transfer</button>
         {status === "done" ? (
-          <p className="done">Money Transfered Successfully</p>
+          <p className="done">Money transfered successfully</p>
         ) : status === "failed" ? (
           <p className="failed">Failed, please type valid emails</p>
+        ) : status === "not_enough" ? (
+          <p className="failed">Not enough balance</p>
         ) : (
           ""
         )}

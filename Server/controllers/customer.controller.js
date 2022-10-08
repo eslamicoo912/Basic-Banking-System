@@ -39,6 +39,9 @@ export const transfer = async (req, res) => {
     if (sender === null || reciever === null)
       return res.status(200).json({ status: "failed" });
 
+    if (sender.balance < amount)
+      return res.status(200).json({ status: "not_enough" });
+
     await CustomerModel.updateOne(
       { email: senderEmail },
       { balance: sender.balance - amount }
