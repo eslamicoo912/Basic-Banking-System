@@ -6,6 +6,6 @@ const routes = Router();
 routes.post("/", controllers.createCustomer);
 routes.post("/transfer", controllers.transfer);
 routes.get("/", controllers.viewAllCustomers);
-routes.get("/:name", controllers.viewOneCustomer);
+routes.get("/:email", controllers.viewOneCustomer);
 
 export default routes;
