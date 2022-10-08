@@ -1,0 +1,67 @@
+.transfer {
+  position: absolute;
+  top: 22%;
+  left: 35%;
+  transform: translateY(-50%, -50%);
+  background-color: #1e2529;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+caption {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+form input,
+button,
+p {
+  margin: 30px auto;
+}
+
+input {
+  padding: 13px;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 350px;
+  background-color: transparent;
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 13px;
+  width: 200px;
+  background-color: #0a75df;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d65a27;
+}
+
+p.done {
+  color: #009944;
+}
+
+p {
+  color: #c13627;
+}

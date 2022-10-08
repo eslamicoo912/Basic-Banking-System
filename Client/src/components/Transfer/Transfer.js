@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Transfer.css";
 
 const URL = "http://localhost:5000/customers/transfer";
 
 const Transfer = () => {
   const [formData, setFormData] = useState({
-    sender: "eslamicoo912@yahoo.com",
-    reciever: "ahmed10@yahoo.com",
-    amount: 6165,
+    sender: "",
+    reciever: "",
+    amount: 0,
   });
   const [status, setStatus] = useState("");
 
@@ -22,11 +23,17 @@ const Transfer = () => {
     e.preventDefault();
     const response = await axios.post(URL, formData);
     setStatus(response.data.status);
+    setFormData({
+      sender: "",
+      reciever: "",
+      amount: 0,
+    });
   };
 
   return (
-    <div>
+    <div className="transfer">
       <form onSubmit={handleSubmit}>
+        <caption>Transfer Data</caption>
         <input
           type="text"
           name="sender"
