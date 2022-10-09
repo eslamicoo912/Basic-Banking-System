@@ -4,7 +4,10 @@ const Transfer = mongoose.Schema({
   sender: String,
   reciever: String,
   amount: Number,
-  date: new Date(),
+  date: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 const TransferModel = mongoose.model("TransferModel", Transfer);

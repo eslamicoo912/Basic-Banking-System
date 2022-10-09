@@ -1,4 +1,5 @@
 import CustomerModel from "../models/customer.model.js";
+import TransferModel from "../models/transfers.model.js";
 
 export const createCustomer = async (req, res) => {
   try {
@@ -50,9 +51,23 @@ export const transfer = async (req, res) => {
       { email: recieverEmail },
       { balance: reciever.balance + amount }
     );
+
+    const transfer = new TransferModel(req.body);
+    transfer.save();
+
     res.status(200).json({
       status: "done",
+      transaction: transfer,
     });
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const getTransfers = async (req, res) => {
+  try {
+    const transfers = await TransferModel.find();
+    res.json(transfers);
   } catch (error) {
     console.log(error.message);
   }
