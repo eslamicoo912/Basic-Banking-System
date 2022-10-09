@@ -6,3 +6,7 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   transition: 0.3s;
 }
+
+body {
+  background-color: #1e2529;
+}

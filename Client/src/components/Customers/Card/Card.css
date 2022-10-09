@@ -10,6 +10,7 @@ table tbody tr:last-child {
 }
 table td,
 table th {
+  color: white;
   text-align: left;
 }
 table td.l,
@@ -25,6 +26,5 @@ table th.r {
   text-align: center;
 }
 table tbody tr:hover td {
-  background-color: #201b4f;
-  color: white;
+  background-color: #d65a27;
 }

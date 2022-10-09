@@ -1,7 +1,6 @@
 table {
   border-spacing: 1;
   border-collapse: collapse;
-  background: white;
   border-radius: 6px;
   overflow: hidden;
   max-width: 800px;
@@ -17,11 +16,11 @@ table td,
 table th {
   padding-left: 8px;
   text-align: center;
-  border: 1px solid #201b4f;
+  border: 1px solid black;
 }
 table thead tr {
   height: 60px;
-  background: #201b4f;
   color: white;
+  background-color: #d65a27;
   font-size: 16px;
 }
