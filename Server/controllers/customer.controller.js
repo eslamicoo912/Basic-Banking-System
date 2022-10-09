@@ -52,7 +52,7 @@ export const transfer = async (req, res) => {
       { balance: reciever.balance + amount }
     );
 
-    const transfer = new TransferModel(req.body);
+    const transfer = new TransferModel({ ...req.body, date: new Date() });
     transfer.save();
 
     res.status(200).json({
