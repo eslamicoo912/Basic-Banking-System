@@ -1,0 +1,11 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
