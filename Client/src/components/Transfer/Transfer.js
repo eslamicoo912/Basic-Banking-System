@@ -12,6 +12,7 @@ const Transfer = () => {
   });
   const [status, setStatus] = useState("");
 
+  // function to handle the change happening in the input fields
   const handleChange = (e) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -19,6 +20,7 @@ const Transfer = () => {
     }));
   };
 
+  // function to handle submitting the transaction
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post(URL, formData);

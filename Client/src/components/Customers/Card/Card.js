@@ -3,7 +3,9 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 const Card = ({ customer }) => {
+  // destructing the properties of the customer's object
   const { name, email, balance } = customer;
+
   return (
     <tr>
       <td>{name}</td>

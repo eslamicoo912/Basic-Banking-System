@@ -8,7 +8,7 @@ const Header = () => {
     <header>
       <div className="title">
         <h1>
-          es <span>MONEY</span>
+          es<span>MONEY</span>
         </h1>
         <BsBank2 className="icon" />
       </div>

@@ -33,6 +33,7 @@ const SingleCustomer = () => {
   }, []);
 
   const list = transfers
+    // filtering the transfers that belongs to this customer
     .filter((transfer) => {
       return (
         transfer.sender === custData.email ||

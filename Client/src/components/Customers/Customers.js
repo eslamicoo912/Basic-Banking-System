@@ -17,10 +17,6 @@ const Customers = () => {
     fetchData();
   }, []);
 
-  const hanldeCardClick = () => {
-    setCurrentEmail();
-  };
-
   const list = customers.map((customer, index) => {
     return <Card key={index} customer={customer} />;
   });
