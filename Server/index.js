@@ -17,6 +17,9 @@ app.use(express.json());
 
 // routes
 app.use("/customers", customerRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello, Bank");
+});
 
 // database
 
@@ -27,7 +30,7 @@ mongoose
   })
   .then(() => {
     app.listen(port, () => {
-      console.log(`listening for 3000`);
+      console.log(`listening for ${port}`);
     });
   })
   .catch((err) => {
