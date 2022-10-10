@@ -17,6 +17,10 @@ const Customers = () => {
     fetchData();
   }, []);
 
+  const hanldeCardClick = () => {
+    setCurrentEmail();
+  };
+
   const list = customers.map((customer, index) => {
     return <Card key={index} customer={customer} />;
   });
@@ -28,6 +32,7 @@ const Customers = () => {
           <th>Name</th>
           <th>Email</th>
           <th>Balance</th>
+          <th>More</th>
         </tr>
       </thead>
       <tbody>{list}</tbody>
