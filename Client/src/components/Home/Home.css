@@ -1,6 +1,7 @@
 .home {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 100px;
   position: absolute;
@@ -8,4 +9,15 @@
   left: 20%;
   transform: translateX(-50%);
   transform: translateY(-50%);
+}
+
+.home-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.home-title {
+  color: white;
 }

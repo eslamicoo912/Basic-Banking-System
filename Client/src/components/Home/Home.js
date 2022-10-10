@@ -5,24 +5,31 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="home">
-      <Card
-        title="Customers"
-        desc="view all our customers' data"
-        linkTitle="Customers"
-        linkRoute="/customers"
-      />
-      <Card
-        title="Transfer"
-        desc="transfer money from customer to another"
-        linkTitle="Trasnfer"
-        linkRoute="/transfer"
-      />
-      <Card
-        title="Transactions"
-        desc="view all our transactions' data"
-        linkTitle="Transaction"
-        linkRoute="/transfers"
-      />
+      <div className="home-title">
+        <h1>
+          Basic <span>Banking</span> System
+        </h1>
+      </div>
+      <div className="home-cards">
+        <Card
+          title="Customers"
+          desc="view all our customers' data"
+          linkTitle="Customers"
+          linkRoute="/customers"
+        />
+        <Card
+          title="Transfer"
+          desc="transfer money from customer to another"
+          linkTitle="Trasnfer"
+          linkRoute="/transfer"
+        />
+        <Card
+          title="Transactions"
+          desc="view all our transactions' data"
+          linkTitle="Transaction"
+          linkRoute="/transfers"
+        />
+      </div>
     </div>
   );
 };
