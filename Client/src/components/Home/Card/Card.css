@@ -19,13 +19,13 @@
 
 .card a {
   background-color: transparent;
-  border: 1px solid #f09666;
+  border: 1px solid #ec2c55;
   padding: 10px 30px;
-  color: #f09666;
+  color: #ec2c55;
   text-decoration: none;
 }
 
 .card a:hover {
-  background-color: #f09666;
+  background-color: #ec2c55;
   color: white;
 }

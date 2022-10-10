@@ -3,6 +3,9 @@ import "./SingleCustomer.css";
 import axios from "axios";
 import logo from "./logo.jpg";
 import Card from "../../Transactions/Card/Card";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { BsFilePersonFill } from "react-icons/bs";
 
 const URL = "http://localhost:5000";
 
@@ -43,26 +46,36 @@ const SingleCustomer = () => {
   return (
     <div className="single-customer">
       <div className="customer-card">
-        <img src={logo} alt="logo" />
+        <BsFilePersonFill className="logo" />
         <h3>{custData.name}</h3>
         <div className="footer">
-          <p>{custData.email}</p>
-          <p>{custData.balance}</p>
+          <div className="container">
+            <AiOutlineMail className="icon email-icon" />
+            <p>{custData.email}</p>{" "}
+          </div>
+          <div className="container">
+            <RiMoneyDollarCircleLine className="icon balance-icon" />{" "}
+            <p>{custData.balance}</p>{" "}
+          </div>
         </div>
       </div>
-      <div className="customer-transactions">
-        <table className="transactions">
-          <thead>
-            <tr>
-              <th>Sender</th>
-              <th>Reciever</th>
-              <th>Amount</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>{list}</tbody>
-        </table>
-      </div>
+      {list.length ? (
+        <div className="customer-transactions">
+          <table className="transactions">
+            <thead>
+              <tr>
+                <th>Sender</th>
+                <th>Reciever</th>
+                <th>Amount</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>{list}</tbody>
+          </table>
+        </div>
+      ) : (
+        <h1>This Customer Has No Transactions</h1>
+      )}
     </div>
   );
 };
