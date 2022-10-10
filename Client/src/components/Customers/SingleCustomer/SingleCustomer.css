@@ -1,0 +1,26 @@
+.single-customer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.single-customer img {
+  width: 40%;
+}
+
+.customer-card {
+  text-align: center;
+  background-color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #df282f;
+  margin: 30px 0 0 0;
+}
+
+.footer p {
+  color: white;
+}
