@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Transfer.css";
 
-const URL = "http://localhost:5000/customers/transfer";
+const URL = "https://banking-system.onrender.com/customers/transfer";
 
 const Transfer = () => {
   const [formData, setFormData] = useState({

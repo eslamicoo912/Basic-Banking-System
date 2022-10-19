@@ -3,7 +3,7 @@ import axios from "axios";
 import Card from "./Card/Card";
 import "./Transactions.css";
 
-const URL = "http://localhost:5000/customers/transfers";
+const URL = "https://banking-system.onrender.com/customers/transfers";
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);

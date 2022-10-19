@@ -7,7 +7,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { BsFilePersonFill } from "react-icons/bs";
 
-const URL = "http://localhost:5000";
+const URL = "https://banking-system.onrender.com/";
 
 const SingleCustomer = () => {
   const [custData, setCusData] = useState({});
