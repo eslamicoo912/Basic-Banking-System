@@ -7,11 +7,13 @@ const URL = "https://banking-system.onrender.com/customers/transfers";
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     const response = await axios.get(URL);
     const { data } = response;
     setTransactions(data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -21,6 +23,8 @@ const Transactions = () => {
   const list = transactions.map((transaction, index) => {
     return <Card key={index} transaction={transaction} />;
   });
+
+  if (loading) return <h1 className="loading">Loading ...</h1>;
 
   return (
     <table className="transactions">

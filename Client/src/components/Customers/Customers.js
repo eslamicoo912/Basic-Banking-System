@@ -7,10 +7,12 @@ const URL = "https://banking-system.onrender.com/customers";
 
 const Customers = () => {
   const [customers, setCustomers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     const response = await axios.get(URL);
     setCustomers(response.data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -20,6 +22,8 @@ const Customers = () => {
   const list = customers.map((customer, index) => {
     return <Card key={index} customer={customer} />;
   });
+
+  if (loading) return <h1 className="loading">Loading ...</h1>;
 
   return (
     <table className="customers">
