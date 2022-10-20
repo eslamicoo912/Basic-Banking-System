@@ -15,7 +15,9 @@ const SingleCustomer = () => {
 
   const fetchData = async () => {
     // get customer data
-    const responseData = await axios.get(`${URL}${window.location.pathname}`);
+    const responseData = await axios.get(
+      `${URL}/customers/${window.location.pathname}`
+    );
     const { data } = responseData;
     setCusData(data);
   };
