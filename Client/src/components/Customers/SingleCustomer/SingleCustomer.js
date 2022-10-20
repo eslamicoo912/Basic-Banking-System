@@ -7,19 +7,19 @@ import { AiOutlineMail } from "react-icons/ai";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { BsFilePersonFill } from "react-icons/bs";
 
-const URL = "https://banking-system.onrender.com/";
+const URL = "https://banking-system.onrender.com";
 
 const SingleCustomer = () => {
   const [custData, setCusData] = useState({});
   const [transfers, setTransfers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     // get customer data
-    const responseData = await axios.get(
-      `${URL}/customers/${window.location.pathname}`
-    );
+    const responseData = await axios.get(`${URL}${window.location.pathname}`);
     const { data } = responseData;
     setCusData(data);
+    setLoading(false);
   };
 
   const fetchTransfers = async () => {
@@ -45,6 +45,8 @@ const SingleCustomer = () => {
     .map((transfer, index) => {
       return <Card key={index} transaction={transfer} />;
     });
+
+  if (loading) return <h1 className="loading">Loading ...</h1>;
 
   return (
     <div className="single-customer">
