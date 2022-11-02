@@ -1,14 +1,10 @@
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 100px;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
+  gap: 50px;
+  height: calc(100vh - 200px);
 }
 
 .home-cards {

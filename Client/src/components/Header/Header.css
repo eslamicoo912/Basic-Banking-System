@@ -42,5 +42,9 @@ header .links a {
 }
 
 header .links a:hover {
-  color: #d65a27;
+  color: #ec2c55;
+}
+
+header .links .active {
+  color: #ec2c55;
 }
