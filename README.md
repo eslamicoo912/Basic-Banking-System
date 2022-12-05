@@ -3,7 +3,7 @@
 Hello, friends! This is a **Dynamic Banking System** developed by **MERN** stack. This project is developed for a virtual internship progeam at **The-Sparks-Foundation**.
 
 Watch The Live Video Here:
-![fa-youtube](./Client/public/images/fa-youtube.svg) [video link](https://youtu.be/83i6BAR-iuE)
+@icon-fa-youtube [video link](https://youtu.be/83i6BAR-iuE)
 
 ![home page](./Client/public/images/home.png);
 ![customers page](./Client/public/images/customers.png)
