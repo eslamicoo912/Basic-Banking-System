@@ -1,4 +1,5 @@
 import React from "react";
+import { CgMoreR } from "react-icons/cg";
 import "./Card.css";
 import { Link } from "react-router-dom";
 
@@ -10,9 +11,11 @@ const Card = ({ customer }) => {
     <tr>
       <td>{name}</td>
       <td>{email}</td>
-      <td>{balance}</td>
+      <td>${balance}</td>
       <td>
-        <Link to={`/customers/${email}`}>Read More</Link>
+        <Link to={`/customers/${email}`}>
+          <CgMoreR />
+        </Link>
       </td>
     </tr>
   );

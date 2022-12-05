@@ -1,9 +1,9 @@
 td {
-  color: #201b4f;
+  color: black !important;
 }
 table tbody tr {
+  background-color: white;
   height: 71px;
-  border-bottom: 1px solid #e3f1d5;
 }
 table tbody tr:last-child {
   border: 0;
@@ -25,15 +25,11 @@ table td.r,
 table th.r {
   text-align: center;
 }
-table tbody tr:hover td {
-  background-color: #ec2c55;
-}
 
 tr td a {
   text-decoration: none;
-  color: white;
-  background-color: #ec2c55;
+  color: #ec2c55;
   padding: 10px 20px;
   border-radius: 30px;
-  border: 2px solid white;
+  font-size: 2rem;
 }
